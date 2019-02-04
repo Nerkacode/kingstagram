@@ -1,5 +1,5 @@
 const router = require("express").Router()
-//const todoController = require('../controllers/kingsController')
+//const kingsController = require('../controllers/kingsController')
 const userController = require("../controllers/userController.js")
 const middleware = require('../middleware/middleware.js')
 
@@ -10,12 +10,12 @@ router.get('/', (req, res) => {
   })
 })
 
-router.route('/kingstagram')
-  .post(middleware.authenticate, todoController.createTodoItem)
-  .get(middleware.authenticate, todoController.getItems)
+//router.route('/kingstagram')
+//  .post(middleware.authenticate, kingsController.createTodoItem) // cia reiks pakoreguoti createTodoItem funkcija ir name
+//  .get(middleware.authenticate, kingsController.getItems)
 
-router.route('/kingstagramID')
-.post(todoController.getByID)
+//router.route('/kingstagramID')
+//.post(kingsController.getByID)
 
 router.route("/user")
   .post(userController.createUser)
