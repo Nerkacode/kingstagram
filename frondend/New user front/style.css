@@ -1,0 +1,26 @@
+body {
+  background-color: #fafafa;
+  align-items: center;
+  text-align: center;
+}
+
+.main_container {
+  display: flex;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.user_container_2 {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+.user_container_1 {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
