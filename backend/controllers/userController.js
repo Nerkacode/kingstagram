@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken")
 const config = require('../config/config')
 let {
   User
-} = require("../models/userModel")
+} = require("../model/userModel")
 
 
 let createUser = (req, res) => {
@@ -24,12 +24,10 @@ let createUser = (req, res) => {
 
 let login = (req, res) => {
   let data = req.body
-  User.find({
-      $or:[
-        {'email':user.email}, 
-        {'nickname:': user.nickname}
-      ]
-  }).then((user) => {
+  //User.findOne({
+  //  nickname: data.nickname
+  User.findOne().or([{'email': data.email}, {'nickname': data.nickname}])
+  .then((user) => {
     if (!user) {
       res.json("User doesnt exist or incorect user name. Maby you have to register before login.")
       return

@@ -4,7 +4,7 @@ const {
 } = require('../config/config')
 const {
   User
-} = require('../models/userModel')
+} = require('../model/userModel')
 
 let authenticate = (req, res, next) => { //siuo atveju next apibrezia kad cia yra middleware funkcija
   let token = req.header("x-auth") //pagooglinti header
