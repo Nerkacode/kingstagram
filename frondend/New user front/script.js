@@ -44,12 +44,11 @@ function createNewUser() {
 function login() {
   var url = "http://localhost:3000/api/login";
   let emailValue = document.getElementById("emailValue").value;
-  let nicknameValue = document.getElementById("nicknameValue").value;
   let passwordValue = document.getElementById("passwordValue").value;
   
   let data = {
     email: emailValue,
-    //nickname: nicknameValue,
+    nickname: emailValue,
     password: passwordValue
   };
 
