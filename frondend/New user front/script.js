@@ -43,15 +43,15 @@ function createNewUser() {
 
 function login() {
   var url = "http://localhost:3000/api/login";
-  let emailValue = document.getElementById("emailValue").value;
-  let passwordValue = document.getElementById("passwordValue").value;
+  let emailValueLogin = document.getElementById("emailValueLogin").value;
+  let passwordValueLogin = document.getElementById("passwordValueLogin").value;
   
   let data = {
-    email: emailValue,
-    nickname: emailValue,
-    password: passwordValue
+    email: emailValueLogin,
+    nickname: emailValueLogin,
+    password: passwordValueLogin
   };
-
+console.log(data)
   fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
@@ -60,19 +60,22 @@ function login() {
     }
   })
     .then(function(response) {
+      console.log(response)
       if (!response.ok) {
         throw Error(response.statusText);
-      }
+      } 
       token = response.headers.get("x-auth");
       console.log(response.headers.get("x-auth"));
       window.localStorage.setItem("x-auth", token);
 
       return response.json();
+  
     })
     .then(function(responseAsJson) {
       window.localStorage.setItem("nickname", nicknameValue);
       console.log(responseAsJson);
-      alert("Success");
+      // alert("Success");
+      window.location.href ="../profile-front/profile.html"
     })
     .catch(error => console.error("Error:", error));
 }

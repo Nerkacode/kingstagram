@@ -25,11 +25,13 @@ let createUser = (req, res) => {
 let login = (req, res) => {
   let data = req.body
   //User.findOne({
-  //  nickname: data.nickname
+  //  nickname: data.nickname+
+  console.log(data)
   User.findOne().or([{'email': data.email}, {'nickname': data.nickname}])
   .then((user) => {
+    // console.log(user)
     if (!user) {
-      res.json("User doesnt exist or incorect user name. Maby you have to register before login.")
+      res.status(401).json("User doesnt exist or incorect user name. Maby you have to register before login.")
       return
     }
     bcrypt.compare(data.password, user.password, (err, resp) => {
