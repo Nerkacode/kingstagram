@@ -1,0 +1,85 @@
+body{
+    overflow-y: scroll;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+  
+ .logo{
+     
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Euphoria Script', cursive;
+    justify-content: space-between;
+    }
+
+
+.containerr{
+    display: flex;
+    line-height: 0.5rem;
+}
+.fas{
+    content: "\f002";
+    line-height: 1.5rem;
+    text-align: center;
+   }
+.fab{
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.line{
+    background: black;
+    margin: 0px 14px;
+    width: 1px;
+}
+p{
+    font-size: 25px;
+    font-weight: 200;
+    font-family: unset;
+}
+.box1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 250px;
+        width: 250px;
+    }
+    .box2{
+            background-color: #fafafa;
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+    .box3{
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    button{
+        font-size: 14px;
+        line-height: 18px;
+    
+    }
+    .profile-photo{
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+    }
+    @media (min-width: 736px){
+.box2 {
+    height: 150px;
+    width: 150px;
+}
+    }
+
+    .fa-spinner{
+        font-size: 1rem;
+        line-height: 2.5rem;
+    }
