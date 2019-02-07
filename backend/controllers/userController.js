@@ -26,7 +26,7 @@ let login = (req, res) => {
   let data = req.body
   //User.findOne({
   //  nickname: data.nickname+
-  console.log(data)
+  // console.log(data)
   User.findOne().or([{'email': data.email}, {'nickname': data.nickname}])
   .then((user) => {
     // console.log(user)
