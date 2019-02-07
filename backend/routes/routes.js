@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
 
 router.route("/user")
   .post(userController.createUser)
+  .get(userController.getAllUsers)
 
 router.route("/login")
   .post(userController.login)

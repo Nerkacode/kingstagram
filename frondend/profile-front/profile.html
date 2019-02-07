@@ -30,9 +30,9 @@
             </form>
         </div>
         <div class="buttons">
-            <button class="btn btn-light far fa-compass"></button>
-            <button class="btn btn-light far fa-user"></button>
-            <button class="btn btn-outline-info" id="logOut">Log Out</button>
+            <button class="btn btn-light far fa-compass" onclick="explore()"></button>
+            <button class="btn btn-light far fa-user" onclick="profile()"></button>
+            <button class="btn btn-outline-info" id="logOut" onclick="logout()">Log Out</button>
         </div>
     </div>
 
@@ -44,95 +44,122 @@
                         <img src="../Photos/king_icon.gif" class="profile-photo">
                     </div>
                     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    <i class="fas fa-camera""></i>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-camera""></i>
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Profile picture</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <label for="avatar">Choose a profile picture:</label>
-            <input type="file"
-                   id="avatar" name="avatar"
-                   accept="image/png, image/jpeg">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class=" modal fade" id="exampleModal"
+                            tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Profile picture</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label for="avatar">Choose a profile picture:</label>
+                                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
             </div>
+        </div>
         <div class="col mt-5">
-                <div class="col-6 d-flex">
-                    <p class="w-100">marta.aleksandrovic</p> 
-                    <div class="fas fa-spinner"></div>
+            <div class="col-6 d-flex">
+                <p id="names" class="w-100"> </p>
+                <div class="fas fa-spinner"></div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    Posts
                 </div>
-                <div class="row">
-                        <div class="col-2">
-                        Posts
-                        </div>
-                        <div class="col-3">
-                        Followers
-                        </div>
-                        <div class="col-3">
-                        Following
-                        </div>
-                      </div>
-                
+                <div class="col-3">
+                    Followers
+                </div>
+                <div class="col-3">
+                    Following
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="card-deck">
-            <div class="card">
-              <img src="coffe.jpg" class="card-img-top" alt="...">
-              
+        <div class="card">
+            <img src="coffe.jpg" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="i.JPG" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="i.JPG" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <img src="owl.jpg" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="i.JPG" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="p.jpg" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <img src="coffe.jpg" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="i.JPG" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="card">
+            <img src="i.JPG" class="card-img-top" alt="...">
+            <div class="overlay"></div>
+            <i class="fas fa-crown"></i>
+        </div>
+    </div>
+    </div>
+    <div class="sticky-bottom">
+        <footer class="container py-5">
+            <div class="row d-flex">
+                <div class="col-10">
+                    <nav class="text-small d-flex justify-content-around">
+                        <a class="text-decoration-none" href="#">About Us</a>
+                        <a class="text-decoration-none" href="#">Support</a>
+                        <a class="text-decoration-none" href="#">Privacy</a>
+                    </nav>
+                </div>
+                <div class="col-2">
+                    <small class="d-block mb-3 text-muted">© 2019 KINSTAGRAM</small>
+                </div>
             </div>
-            <div class="card">
-                <img src="i.JPG" class="card-img-top" alt="...">
-            </div>
-            <div class="card">
-              <img src="i.JPG" class="card-img-top" alt="...">
-              
-              </div>
-            </div>
-            <div class="card-deck">
-                    <div class="card">
-                      <img src="owl.jpg" class="card-img-top" alt="...">
-                      
-                    </div>
-                    <div class="card">
-                        <img src="i.JPG" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card">
-                      <img src="p.jpg" class="card-img-top" alt="...">
-                      
-                      </div>
-                    </div>
-                    <div class="card-deck">
-                            <div class="card">
-                              <img src="coffe.jpg" class="card-img-top" alt="...">
-                              
-                            </div>
-                            <div class="card">
-                                <img src="i.JPG" class="card-img-top" alt="...">
-                            </div>
-                            <div class="card">
-                              <img src="i.JPG" class="card-img-top" alt="...">
-                              
-                              </div>
-                            </div>
-          </div>
-</div>
+        </footer>
+    </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -140,6 +167,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="profile.js"></script>
+    <script src="../NewUser/script.js"></script>
 </body>
 
 </html>

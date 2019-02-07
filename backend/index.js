@@ -5,6 +5,9 @@ const cors = require("cors")
 const apiRouter = require("./routes/routes")
 
 const app = express();
+var corsOptions = {
+  exposedHeaders: ["x-auth"]
+};
 
 mongoose.connect("mongodb://localhost:27017/kingstagram", {
   useCreateIndex: true,
@@ -12,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/kingstagram", {
 })
 
 
-app.use(cors())
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({
   extended: true
 }))

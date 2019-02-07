@@ -71,11 +71,19 @@ let logout = (req, res) => {
   })
 }
 
-
-
+let getAllUsers = (req, res) => {
+  User.find({}, (users, err) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(users);
+    }
+  })
+}
 
 module.exports = {
   createUser,
   login,
-  logout
+  logout,
+  getAllUsers
 }
