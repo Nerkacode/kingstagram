@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Euphoria+Script" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Document</title>
+</head>
+
+<body onload="getAllUsers()">
+    <div class="navbar sticky-top navbar-light bg-light">
+        <div class="containerr">
+            <div class="fab fa-instagram"></div>
+            <div class="line"></div>
+            <div class="logo">
+                <h1>Kingstagram</h1>
+            </div>
+        </div>
+        <div class="containerr">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-light far fa-compass" onclick="explore()"></button>
+            <button class="btn btn-light far fa-user" onclick="profile()"></button>
+            <button class="btn btn-outline-info" id="logOut" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 mt-5">
+                <div class="box1">
+                    <div class="box2">
+                        <button class="box3" title="Change Profile Photo">
+                            <img src="p.jpg" class="profile-photo">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-5">
+                <div class="col-6">
+                    <p id ="names" class="w-100"> </p> 
+
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                    Posts
+                    </div>
+                    <div class="col-3">
+                    Followers
+                    </div>
+                    <div class="col-3">
+                    Following
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-deck" class="d-flex flex-wrap"></div>
+
+    <div class="sticky-bottom">
+        <footer class="container py-5">
+            <div class="row d-flex">
+                <div class="col-10">
+                <nav class="text-small d-flex justify-content-around">
+                    <a class="text-decoration-none" href="#">About Us</a>
+                    <a class="text-decoration-none" href="#">Support</a>
+                    <a class="text-decoration-none" href="#">Privacy</a>
+                </nav>
+            </div>
+            <div class="col-2">
+                    <small class="d-block mb-3 text-muted">© 2019 KINSTAGRAM</small>
+                </div>
+            </div>
+        </footer>
+  </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+<script src="profile.js"></script>
+<script src="../NewUser/script.js"></script>
+</html>

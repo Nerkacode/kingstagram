@@ -46,49 +46,44 @@ p{
         width: 250px;
     }
     .box2{
-            background-color: #e9e9e9;
+            background-color: #fafafa;
             border-radius: 50%;
             box-sizing: border-box;
             margin: 0 auto;
-            /* overflow: hidden; */
+            overflow: hidden;
             position: relative;
         }
-
+    .box3{
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
     button{
         font-size: 14px;
         line-height: 18px;
+    
     }
-
-    /* .fa-camera {
-        position: absolute;
-        right: 2%;
-        top: 60%;
-    } */
     .profile-photo{
             height: 100%;
             left: 0;
             position: absolute;
-            top: 0; 
-            width: 100%; 
-            transform: scale(0.8);
+            top: 0;
+            width: 100%;
     }
 
-    input[type="file"] {
-        display: block;
-    }
-    .custom-file-upload {
-        border: 1px solid #ccc;
-        display: inline-block;
-        padding: 6px 12px;
-        cursor: pointer;
-    }
+a{
+    text-transform: uppercase;
+    color:rgba(148, 147, 147, 0.774);
+}
 
-    .btn-primary {
-        background-color: transparent;
-        color: black;
-        border: 1px solid black;
-    }
-
+.card{
+    margin-bottom: 1rem!important;
+}
+.navbar{
+    width:100%;
+}
     @media (min-width: 736px){
 .box2 {
     height: 150px;
@@ -100,3 +95,71 @@ p{
         font-size: 1rem;
         line-height: 2.5rem;
     }
+
+#card-deck{
+    height: 240px;
+    overflow: auto;
+}
+img{
+    position: relative;
+    width:100%;
+    height:100%;
+ 
+ }
+ .card{
+    width:300px;
+    height:300px;
+    margin-bottom: 1rem!important;
+ 
+ }
+ .overlay{
+    position: absolute;
+ }
+ .fa-crown{
+    position: relative;
+    top: -150px;
+    display: none;
+    color:white;
+    font-size: 25px;
+ }
+ .card:hover > .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    cursor: pointer;
+    background-color:#000;
+    opacity:0.5;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+ }
+ .card:hover > .fa-crown{
+    display: block;
+    }
+ .navbar{
+    width:100%;
+ }
+    @media (min-width: 736px){
+ .box2 {
+    height: 150px;
+    width: 150px;
+ }
+ .fa-spinner{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-left: 2rem;
+ }
+    }
+ @media (max-width: 736px){
+ .logo,.line{
+    display:none;
+ }
+ .box2 {
+    height: 150px;
+    width: 150px;
+ }
+ .fa-spinner{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    margin-left: 2rem;
+    }
+ }

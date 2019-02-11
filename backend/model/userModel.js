@@ -29,6 +29,10 @@ let UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  userphoto: {
+    type: String,
+    default: "http://127.0.0.1:5500/frondend/Photos/king_icon.gif"
+  },
   tokens: [{
     access: {
       type: String,

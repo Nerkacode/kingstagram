@@ -59,23 +59,19 @@ console.log(data)
       "Content-Type": "application/json"
     }
   })
-    .then(function(response) {
-      console.log(response)
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } 
-      token = response.headers.get("x-auth");
-      console.log(response.headers.get("x-auth"));
-      window.localStorage.setItem("x-auth", token);
-
-      return response.json();
+    .then((res)=> {
+      console.log(res.headers.get('x-auth'))
+      localStorage.setItem('x-auth', res.headers.get('x-auth'))
+      return res.json()
   
     })
     .then(function(responseAsJson) {
       window.localStorage.setItem("nickname", nicknameValue);
       console.log(responseAsJson);
-      // alert("Success");
+
       window.location.href ="../profile-front/profile.html"
+
     })
     .catch(error => console.error("Error:", error));
 }
+
