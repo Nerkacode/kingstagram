@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kingstagram</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="user_container_1">
+      <img src="https://cdn-images-1.medium.com/max/1600/0*6V0TKYKHWq-D10M5." alt="" />
+      <div id="carouselExampleSlidesOnly" id="slide"class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="http://picture-cdn.wheretoget.it/pxwng3-l-610x610-phone+cover-yeah+bunny-case-queen-crown-selfie-iphone+cover-iphone+case-iphone.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://s11.favim.com/orig/160310/crown-emoji-like-phone-Favim.com-4069161.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://cdn.24.co.za/files/Cms/General/d/650/9672ae0a611a4d148642fa96c6f28642.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="user_container_2">
+      <header>
+        <h3 class="Kingstagram_logo"> <img src="https://pbs.twimg.com/media/DirqkG0XcAE24YC.jpg" height="150px" width="150px" alt="">
+
+ </h3>
+      </header>
+      <header>
+        <div id="createNewUser_fields" class="text-center">
+          <h5 class="card-title">Create new user</h5>
+          <div class="card-body">
+            <div class="">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="emailValue" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2" />
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="fullnameValue"placeholder="Full name" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control"id="nicknameValue" placeholder="Username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control"id="passwordValue" placeholder="Password" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+              </div>
+
+
+            </div>
+            <a href="#" id="createUser_button" class="btn btn-secondary" onclick="createNewUser()">Create user</a> or
+            <a href="#" id="login_button" class="btn btn-secondary">Sign in</a>
+          </div>
+          <div class="card-footer text-muted">
+            By signing up, you agree to our Terms . Learn how we collect, use and share your data in our Data Policy and how we use cookies and similar technology in our Cookies Policy .
+          </div>
+        </div>
+        <div id="login_fields" class="card">
+          <div class="card-body">
+            <h5 class="card-title">login</h5>
+            <div class="input-group mb-3">
+              <input type="text" id="emailValueLogin" class="form-control" placeholder="Email or Username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" id="passwordValueLogin" class="form-control" placeholder="Password" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            </div>
+
+            <a href="#"  id="login_btn"class="btn btn-secondary" onclick="login()">login</a>
+
+          </div>
+        </div>
+      </header>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

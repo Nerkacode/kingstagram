@@ -15,7 +15,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="defautUserPhoto()">
     <div class="navbar sticky-top navbar-light bg-light">
         <div class="containerr">
             <div class="fab fa-instagram"></div>
@@ -40,8 +40,8 @@
         <div class="row">
             <div class="col-5 mt-5">
                 <div class="box1">
-                    <div class="box2">
-                        <img src="../Photos/king_icon.gif" class="profile-photo">
+                    <div class="box2" id="userPhoto">
+                        
                     </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -61,11 +61,11 @@
                                     </div>
                                     <div class="modal-body">
                                         <label for="avatar">Choose a profile picture:</label>
-                                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                                        <input type="file" id="todoValue" name="avatar" accept="image/png, image/jpeg">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-primary" onclick="createItem()">Save changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -125,6 +125,7 @@
             <i class="fas fa-crown"></i>
         </div>
     </div>
+    <!-- for test -->
     <div class="card-deck">
         <div class="card">
             <img src="coffe.jpg" class="card-img-top" alt="...">

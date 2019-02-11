@@ -57,7 +57,7 @@ let login = (req, res) => {
     res.json("Something went wrong, please try again")
   })
 }
-
+// for test
 let logout = (req, res) => {
   let token = req.token
   req.user.update({
@@ -81,9 +81,24 @@ let getAllUsers = (req, res) => {
   })
 }
 
+let getCurrentUsers = (req, res) => {
+  res.json(req.user)
+   }
+  
+   let changeUserPhoto = (req, res) => {
+     let user = req.user
+     user.userphoto = "http://localhost:3000/" + req.file.path
+     user.save()
+     .then((user) => {
+      res.json(user)
+     })
+   }
+
 module.exports = {
   createUser,
   login,
   logout,
-  getAllUsers
+  getAllUsers,
+  getCurrentUsers,
+  changeUserPhoto
 }
