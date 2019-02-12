@@ -14,7 +14,7 @@ mongoose.connect("mongodb://localhost:27017/kingstagram", {
   useNewUrlParser: true
 })
 
-app.use('/uploads', express.static('uploads'));
+app.use('/frontend', express.static('frondend'));
 
 app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({

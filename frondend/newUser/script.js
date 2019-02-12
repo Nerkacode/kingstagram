@@ -1,9 +1,9 @@
 const signIn = document.getElementById("login_button");
 const createUser = document.getElementById("createUser_button");
 //const login = document.getElementById("login_btn");
-let token;
 let cardDeck = document.getElementById("card-deck")
-
+let token;
+let nickname;
 
 document.getElementById("login_fields").style.display = "none";
 
@@ -14,10 +14,7 @@ signIn.addEventListener("click", e => {
 
 // createUser.addEventListener("click", e => {
 //  createNewUser();
-// test
-//rrrr
 // });
-
 
 function createNewUser() {
   var url = "http://localhost:3000/api/user";
@@ -50,13 +47,14 @@ function login() {
   var url = "http://localhost:3000/api/login";
   let emailValueLogin = document.getElementById("emailValueLogin").value;
   let passwordValueLogin = document.getElementById("passwordValueLogin").value;
-  
+  let nicknameValue = document.getElementById("nicknameValue").value;
+
   let data = {
     email: emailValueLogin,
     nickname: emailValueLogin,
     password: passwordValueLogin
   };
-console.log(data)
+  console.log(data);
   fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
@@ -65,26 +63,45 @@ console.log(data)
     }
   })
     .then(function(response) {
-      console.log(response)
+      console.log(response);
       if (!response.ok) {
         throw Error(response.statusText);
-      } 
+      }
       token = response.headers.get("x-auth");
       console.log(response.headers.get("x-auth"));
       window.localStorage.setItem("x-auth", token);
-
+      // window.localStorage.setItem("nickname", nicknameValue);
+      // console.log(data.nickname);
       return response.json();
-  
     })
     .then(function(responseAsJson) {
-      window.localStorage.setItem("nickname", nicknameValue);
       console.log(responseAsJson);
-      // alert("Success");
-      window.location.href ="../profile-front/profile.html";
+      window.location.href = "../profile-front/profile.html";
+      window.localStorage.setItem("nickname", responseAsJson.nickname);
     })
     .catch(error => console.error("Error:", error));
 }
 
+function logout() {
+  var url = "http://localhost:3000/api/logout";
+  var token = window.localStorage.getItem("x-auth", token);
+  console.log(token);
+
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "x-auth": token
+    }
+  })
+    .then(res => res.json())
+    .then(response => {
+      console.log("Success:", response);
+      window.location.href = "../NewUser/index.html";
+      localStorage.clear();
+    })
+    .catch(error => console.error("Error:", error));
+}
 
 function renderUsers(element) {
   let card = document.createElement('div');
@@ -108,6 +125,8 @@ function renderUsers(element) {
 }
 
 function getAllUsers() {
+  console.log(token);
+  token = localStorage.getItem("x-auth");
   users = [];
   
   fetch("http://localhost:3000/api/user", {
@@ -121,6 +140,7 @@ function getAllUsers() {
       return res.json()
     })
     .then(data => {
+      console.log(data);
       if (data.length == 0) {
         let card = document.createElement('card');
         //li.setAttribute('class', 'list-group-item empty');
