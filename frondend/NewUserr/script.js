@@ -120,7 +120,18 @@ function renderUsers(element) {
   followBtn.style.margin = '0 auto';
   followBtn.setAttribute('class', 'btn btn-primary');
 
-  card.innerHTML = card.innerHTML + "PHOTO<br>" + element.nickname;
+  let img = document.createElement("img");
+  img.setAttribute('class', 'img-fluid');
+  img.style.objectFit = "cover";
+  img.style.borderRadius = "100%";
+  img.style.height = '130px';
+  img.style.width = '130px';
+  img.style.margin = '0 auto';
+  img.src = element.userphoto;   
+  img.className = "prof-photo";
+  card.appendChild(img);
+
+  card.innerHTML = card.innerHTML + element.nickname;
   card.appendChild(followBtn);
 }
 
