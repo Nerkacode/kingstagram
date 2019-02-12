@@ -32,7 +32,7 @@ let UserSchema = new mongoose.Schema({
   userphoto: {
     type: String,
     default: "http://127.0.0.1:5500/frondend/Photos/king_icon.gif"
-
+    //default: "../../frondend/Photos/king_icon.gif"
   },
   tokens: [{
     access: {
